@@ -1,0 +1,12 @@
+{
+  "name": "after-animation",
+  "scripts": ["index.js"],
+  "dependencies": {
+    "digitaledgeit/js-animation-events": "^0.1.0"
+  },
+  "development": {
+    "dependencies": {
+      "component/assert": "*"
+    }
+  }
+}

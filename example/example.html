@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        @-webkit-keyframes ball-bounce {
+            0%, 100% {
+                transform: translate3d(0, 100px, 0) scale(0.95);
+            }
+            5%, 98% {
+                transform: translate3d(0, 100px, 0);
+            }
+            50% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @-ms-keyframes ball-bounce {
+            0%, 100% {
+                transform: translate3d(0, 100px, 0) scale(0.95);
+            }
+            5%, 98% {
+                transform: translate3d(0, 100px, 0);
+            }
+            50% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .ball {
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            background-color: red;
+        }
+
+        .ball--bounce {
+            -webkit-animation: ball-bounce 1s ease-in-out forwards 3;
+            -ms-animation: ball-bounce 1s ease-in-out forwards 3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="ball ball--bounce js-ball">
+    </div>
+
+    <script src="../build/build.js"></script>
+    <script>
+
+        var after = require('after-animation');
+
+        var el = document.querySelector('.js-ball');
+        after(el, function(event) {
+          console.log('animation ended!');
+        });
+
+    </script>
+
+</body>
+</html>
