@@ -1,0 +1,15 @@
+{
+  "name": "@nib/after-animation",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nib-health-funds/after-animation.git"
+  },
+  "dependencies": {
+    "animation-events": "^0.1.0"
+  },
+  "devDependencies": {
+    "assert": "*"
+  }
+}
